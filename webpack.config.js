@@ -29,7 +29,13 @@ const outputs = [
     filenameBase: 'prime.worker',
     library: null,
     libraryTarget: null
-  }
+  },
+  // custom interface build
+  {
+    entry: ['./lib/pki.js', './lib/cipher.js', './lib/sha1.js', './lib/random.js', './lib/util.js', './lib/forge.js'],
+    filenameBase: 'forge.interface',
+    libraryTarget: 'umd'
+  },
   // Custom builds can be created by specifying the high level files you need
   // webpack will pull in dependencies as needed.
   //
